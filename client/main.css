@@ -1,0 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  margin-bottom: 60px;
+  height:100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+}
+
+.login-form-bg{
+  background-color: white;
+  border: 15px solid;
+  border-radius: 15px;
+  border-color: white;
+  margin-top: 50px;
+
+}
