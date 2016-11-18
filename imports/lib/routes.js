@@ -18,3 +18,10 @@ FlowRouter.route('/latestupdates',{
     	BlazeLayout.render('latestupdates',{main:'login'});
   	},
 });
+
+FlowRouter.route('/camera',{
+	name: 'camera',
+  	action() {
+    	BlazeLayout.render('camera',{main:'login'});
+  	},
+});
