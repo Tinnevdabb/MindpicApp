@@ -54,3 +54,19 @@ body{
   animation: plus-out 0.3s;
   transition: all 0.3s;
 }
+/*reflection text area*/
+textarea {
+    width: 50%;
+    height: 100px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.back{
+  display: inline-block;
+  position: fixed;
+}
