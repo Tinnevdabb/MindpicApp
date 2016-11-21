@@ -4,6 +4,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
 import '../ui/latestupdates.js';
 import '../ui/login.js';
+import '../ui/reflectiontextarea.js';
 
 FlowRouter.route('/',{
 	name: 'login',
@@ -18,10 +19,18 @@ FlowRouter.route('/latestupdates',{
     	BlazeLayout.render('latestupdates',{main:'login'});
   	},
 });
+FlowRouter.route('/reflectiontextarea',{
+	name: 'reflectiontextarea',
+  	action() {
+    	BlazeLayout.render('reflectiontextarea',{main:'reflectiontextarea'});
+  	},
+});
 
+/*
 FlowRouter.route('/camera',{
 	name: 'camera',
   	action() {
     	BlazeLayout.render('camera',{main:'login'});
   	},
 });
+*/
