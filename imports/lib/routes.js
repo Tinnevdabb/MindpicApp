@@ -5,6 +5,8 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import '../ui/latestupdates.js';
 import '../ui/login.js';
 import '../ui/reflectiontextarea.js';
+import '../ui/camera.js';
+import '../ui/uploadimage.js';
 
 FlowRouter.route('/',{
 	name: 'login',
@@ -26,11 +28,17 @@ FlowRouter.route('/reflectiontextarea',{
   	},
 });
 
-/*
+
 FlowRouter.route('/camera',{
 	name: 'camera',
   	action() {
-    	BlazeLayout.render('camera',{main:'login'});
+    	BlazeLayout.render('camera',{main:'camera'});
   	},
 });
-*/
+
+FlowRouter.route('/uploadimage',{
+	name: 'camera',
+  	action() {
+    	BlazeLayout.render('uploadimage',{main:'uploadimage'});
+  	},
+});
