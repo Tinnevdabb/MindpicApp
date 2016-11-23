@@ -1,17 +1,36 @@
 
 <template name="reflectiontextarea">
 
+  <div class="container-fluid">
 
+    <div class="navbar navbar-light bg-faded">
+      <ul class="nav navbar-nav">
+        <li class="pull-left">
+          <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left"></span></a>
+        </li>
+        <li>
+          <a class="navbar-brand" style="" href="#">Description</a>
+        </li>
+      </ul>
+    </div>
 
-<form>
-<a href="/latestupdates" class="glyphicon glyphicon-arrow-left back" style="color:black"></a>
+    <div class="text-center" style="width:100%;">
+      <div class="thumbnail">
+        <a href="/reflectiontextarea"><img class="reflectionpic" src="/images/img.jpg"/></a>
+      </div>
 
-<textarea  rows="50" cols="8" >
-Write your reflection here.
-</textarea>
-<br>
-<a href="/latestupdates"> <input type="submit" value="save"></a>
+      <div class="container">
+        <div class="caption">
+          <h3>Short description:</h3>
+          <textarea  rows="100" cols="100" placeholder="Please write your short description here..."></textarea>
+          <br>
+          <h3>Reflection:</h3>
+          <textarea  rows="100" cols="100" placeholder="Please write your reflections here..."></textarea>
+          <p><a href="/latestupdates" class="btn btn-primary" role="submit">save</a> </p>
+        </div>
+      </div>
 
-</form>
+    </div>
+  </div>
 
 </template>
