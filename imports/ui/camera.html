@@ -1,5 +1,6 @@
-<template name="example">
-    <a href="#" class="takePhoto">take photo</a>
-
-    <img class="photo">
+<template name="takePhoto">
+    <p><input type="button" class="capture" value="Take Photo"></p>
+    {{#each photos}}
+        <p><img src="{{image}}" width="100%"></p>
+    {{/each}}
 </template>
