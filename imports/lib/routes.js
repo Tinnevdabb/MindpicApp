@@ -7,6 +7,8 @@ import '../ui/login.js';
 import '../ui/reflectiontextarea.js';
 import '../ui/camera.js';
 import '../ui/uploadimage.js';
+import '../ui/contactmenu.js';
+import '../ui/test.js';
 
 FlowRouter.route('/',{
 	name: 'login',
@@ -40,5 +42,20 @@ FlowRouter.route('/uploadimage',{
 	name: 'camera',
   	action() {
     	BlazeLayout.render('uploadimage',{main:'uploadimage'});
+  	},
+});
+
+FlowRouter.route('/contactmenu',{
+	name: 'contactmenu',
+  	action() {
+    	BlazeLayout.render('contactmenu',{main:'contactmenu'});
+  	},
+});
+
+
+FlowRouter.route('/test',{
+	name: 'test',
+  	action() {
+    	BlazeLayout.render('test',{main:'test'});
   	},
 });
