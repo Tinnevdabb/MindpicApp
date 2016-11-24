@@ -5,7 +5,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import './camera.html';
 
 
-Pictures = new Mongo.Collection('pictures');
+pic = new Mongo.Collection('pictures');
 
 Template.takePhoto.helpers({
     'photos': function () {
@@ -15,13 +15,14 @@ Template.takePhoto.helpers({
 
 Template.takePhoto.events({
     'click .capture': function () {
+      console.log("take pic");
         var cameraoptions = {
             width: 640,
             height: 480
         };
 
         MeteorCamera.getPicture(cameraoptions, function (error, data) {
-        //Session.set('photo', data);
+        Session.set('photo', data);
         Meteor.call('saveImage', (data));
     });
 }
