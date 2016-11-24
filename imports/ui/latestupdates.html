@@ -1,14 +1,14 @@
 <template name="latestupdates">
-  <nav class="navbar navbar-light bg-faded">
+  <nav class="navbar navbar-default bg-faded" role = "navigation"  >
     <ul class="nav navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="glyphicon glyphicon-menu-hamburger" style="color:black"></a>
       </li>
-      <li>
-        <a class="navbar-brand align-center" style="color:black" >Latest updates</a>
+      <li class="nav-item">
+        <p class="navbar-brand align-center" style="color:black" >Latest updates</p>
       </li>
       <li class="nav-item">
-        <a href="/rightmenu" class="glyphicon glyphicon-envelope" style="color:black"></a>
+        <a href="/contactmenu" class="glyphicon glyphicon-envelope" style="color:black"></a>
       </li>
     </ul>
   </nav>
@@ -16,18 +16,18 @@
 
 
   <div class=”container”>
-        <ul >
+          <p>User1</p>
+          <a href="/reflectiontextarea"><img width="100%" height="auto" src="/images/1.jpg"/></a>
           <ul>
-              <p class="star">User1</p>
-              <a class="glyphicon glyphicon-star-empty" style="color:black"></a>
+            <p class="star">Description</p>
+            <a class="glyphicon glyphicon-star-empty" id="star-toggle" style="color:black"></a>
           </ul>
-          <a href="/reflectiontextarea"><img src="/images/1.jpg"/></a>
-          <ul>
-              <p class="star">User2</p>
-              <a class="glyphicon glyphicon-star-empty" style="color:black"></a>
-          </ul>
-          <a href="/reflectiontextarea"><img src="/images/1.jpg"/></a>
-        </ul>
+            <p>User2</p>
+            <a href="/reflectiontextarea"><img width="100%" height="auto" src="/images/img.jpg"/></a>
+            <ul>
+              <p class="star">Description</p>
+              <a class="glyphicon glyphicon-star-empty" id="star-toggle" style="color:black"></a>
+            </ul>
   </div>
 
   <a href="/camera">
