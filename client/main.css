@@ -80,3 +80,8 @@ textarea {
 .reflectionpic {
   height: 100%;
 }
+
+.contacts{
+  position: relative;
+  text-align: center
+}
