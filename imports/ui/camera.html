@@ -1,6 +1,21 @@
 <template name="takePhoto">
-    <p><input type="button" class="capture" value="Take Photo"></p>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a class="navbar-brand" href="/latestupdates"><span class="glyphicon glyphicon-arrow-left"></span></a>
+     </div>
+       <div id="myNavbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav navbar-right">
+                  <li><a logout href="/uploadimage"><span class="glyphicon glyphicon-folder-open"></span> </a></li>
+              </ul>
+      </div>
+      </div>
+  </nav>
+
+
+    <input type="button" class="capture" value="Take Photo">
     {{#each photos}}
-        <p><img src="{{image}}" width="100%"></p>
+    <img src="{{image}}" width="100%" height="auto">
     {{/each}}
+
 </template>
