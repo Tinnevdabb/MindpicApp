@@ -4,14 +4,17 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 import './camera.html';
 
-
 pic = new Mongo.Collection('pictures');
 
 Template.takePhoto.helpers({
     'photos': function () {
         return Pictures.find();
+    },
+    'photo': function() {
+      return Session.get('photo');
     }
 });
+
 
 Template.takePhoto.events({
     'click .capture': function () {
