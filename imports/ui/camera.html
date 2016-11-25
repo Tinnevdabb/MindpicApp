@@ -1,21 +1,23 @@
 <template name="takePhoto">
-  <nav class="navbar navbar-inverse">
+
   <div class="container-fluid">
-    <div class="navbar-header">
-       <a class="navbar-brand" href="/latestupdates"><span class="glyphicon glyphicon-arrow-left"></span></a>
-     </div>
-       <div id="myNavbar" class="collapse navbar-collapse">
-           <ul class="nav navbar-nav navbar-right">
-                  <li><a logout href="/uploadimage"><span class="glyphicon glyphicon-folder-open"></span> </a></li>
-              </ul>
-      </div>
-      </div>
-  </nav>
 
+    <div class="navbar navbar-light bg-faded">
+      <ul class="nav navbar-nav">
+        <li class="pull-left">
+          <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left" style="color:black"></span></a>
+        </li>
+        <li>
+          <a class="navbar-brand" style="color:black" href="#">camera</a>
+        </li>
+      </ul>
+    </div>
 
-    <input type="button" class="capture" value="Take Photo">
+    <p><input type="button" class="capture" value="Take Photo"></p>
+    <img src="{{photo}}">
     {{#each photos}}
-    <img src="{{image}}" width="100%" height="auto">
+    <p><img src="{{image}}" width="100%"></p>
     {{/each}}
 
+  </div>
 </template>
