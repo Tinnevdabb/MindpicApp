@@ -12,12 +12,56 @@
         </li>
       </ul>
     </div>
+<div class="text-center">
+<button type="button" class="capture" >
+  <span class="glyphicon glyphicon-camera" ></span>
+</button>
+</div>
 
-    <p><input type="button" class="capture" value="Take Photo"></p>
+<div class="thumbnail">
     <img src="{{photo}}">
     {{#each photos}}
     <p><img src="{{image}}" width="100%"></p>
     {{/each}}
+  </div>
+
+    <br>
+    <div class="container">
+      <div class="caption">
+        <h3>Instructions:</h3>
+        <textarea  rows="100" cols="100" placeholder="
+1.Hey! Who are you? Take a picture, that symbolises you!
+ Reflection part: Nice job! Tell, how this symbolises you!
+
+2.Think about something from the past, that you want t let go. Take a picture of something, that is according to this.
+Reflection part: What is the reason that you can't let this thing go? How does this picture represents your feelings about it? Feel free to write more about this subject!
+
+3.Remind yourself about one goal, that you would like to achieve in your life. Find something around you, that is the symbol of that.
+Reflection part: Explain, why is that the symbol of your future goal. Describe, what are you doing, to achieve that goal. Feel free to write more about this subject!
+
+4.Is there something, that you really want to spend more time on? Let your mind free when taking a picture.
+Reflection part: What is your (secret) wish? What is stopping you from making that real? Feel free to write more about this subject!
+
+5.Is there a place (outside) where you feel calm and save? Show this place by taking a picture of it.
+Reflection part: How was it to be back at this place? How does this place effects your feelings? Tell why you chose this particular place. Feel free to write more about this subject!
+
+6.Everybody has a comfort zone, but sometimes it's good to take a step out of it. Take a picture of something that's out of your comfort zone.
+Reflection part: What is the reason to take a step out of your comfort zone? What does it take from you to make this step? Tell something about the positive thing that you get from crossing your own borders. Feel free to write more about this subject!
+
+7.Search outside for an object that relates to your current feelings.
+Description part: What is this object and why did you make a picture of this? Tell something more about your current feelings.
+
+8.Find a place outside where you feel save and take a picture of this place.
+Description part: What makes you feel save? Why did you choose this place?
+
+9.What's the weather today? Go outside and find an interesting perspective :-)
+Description part: How did today's weather affect you feelings? " disabled></textarea>
+        <br>
+        <h3>Reflection:</h3>
+        <textarea  rows="100" cols="100" placeholder="Please write your reflections here..."></textarea>
+        <p><a href="/latestupdates" class="btn btn-primary" role="submit">save</a> </p>
+      </div>
+    </div>
 
   </div>
 </template>
