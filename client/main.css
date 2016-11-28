@@ -8,9 +8,10 @@ body{
   height:100%;
   background-repeat: no-repeat;
   background-position: center bottom;
-
+  font-family:
 }
 
+/*Login form*/
 .login-form-bg{
   background-color: white;
   border: 15px solid;
@@ -24,6 +25,8 @@ body{
   text-align: center;
 }
 
+/*-------------LATEST UPDATES PAGE------------*/
+
 .floating-button{
   width: 55px;
   height: 55px;
@@ -33,7 +36,6 @@ body{
   bottom: 30px;
   right: 30px;
   cursor: pointer;
-  box-shadow: 0px 2px 5px #666;
 }
 
 .plus{
@@ -55,6 +57,8 @@ body{
   transition: all 0.3s;
 }
 
+
+/*---------------NAVBARS----------------*/
 .navbar-nav {
   width: 100%;
   text-align: center;
@@ -65,7 +69,10 @@ body{
   display: inline-block;
 }
 
-/*reflection text area*/
+
+
+
+/*---------------REFLECTION TEXT AREA---------------*/
 textarea {
     width: 100%;
     height: 100px;
@@ -79,10 +86,6 @@ textarea {
 
 .reflectionpic {
   height: 100%;
-}
-
-.star{
-  display:inline;
 }
 
 .contacts{
