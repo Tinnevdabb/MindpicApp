@@ -14,18 +14,23 @@
     </div>
 
 
-  <div class="text-center">
-  <button type="button" class="capture" >
-    <span class="glyphicon glyphicon-camera" ></span>
-  </button>
-  </div>
 
-  <div class="thumbnail">
+    <ul class="thumbnail">
       <img src="{{photo}}">
       {{#each photos}}
       <p><img src="{{image}}" width="100%"></p>
       {{/each}}
-    </div>
+
+
+      <a href="/camera">
+        <div class="floating-button-picture">
+          <span class="capture glyphicon glyphicon-camera" style="vertical-align:middle; font-size: 20px; top: 28%; left:32%;" ></span>
+        </div>
+      </a>
+
+
+
+    </ul>
 
     <br>
     <div class="container">
