@@ -1,29 +1,31 @@
 <template name="takePhoto">
-
-  <div class="container-fluid">
-
-    <div class="navbar navbar-light bg-faded">
+    <div class="navbar navbar-inverse bg-faded">
       <ul class="nav navbar-nav">
         <li class="pull-left">
-          <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left" style="color:black"></span></a>
+          <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left" style="color:white"></span></a>
         </li>
         <li>
-          <a class="navbar-brand" style="color:black" href="#">camera</a>
+          <a class="navbar-brand star" style="color:white">Camera</a>
+        </li>
+        <li class="pull-right">
+          <a href="/uploadimage"><span class="glyphicon glyphicon-folder-open" style="color:white"></span></a>
         </li>
       </ul>
     </div>
-<div class="text-center">
-<button type="button" class="capture" >
-  <span class="glyphicon glyphicon-camera" ></span>
-</button>
-</div>
 
-<div class="thumbnail">
-    <img src="{{photo}}">
-    {{#each photos}}
-    <p><img src="{{image}}" width="100%"></p>
-    {{/each}}
+
+  <div class="text-center">
+  <button type="button" class="capture" >
+    <span class="glyphicon glyphicon-camera" ></span>
+  </button>
   </div>
+
+  <div class="thumbnail">
+      <img src="{{photo}}">
+      {{#each photos}}
+      <p><img src="{{image}}" width="100%"></p>
+      {{/each}}
+    </div>
 
     <br>
     <div class="container">
@@ -63,5 +65,5 @@ Description part: How did today's weather affect you feelings? " disabled></text
       </div>
     </div>
 
-  </div>
+
 </template>
