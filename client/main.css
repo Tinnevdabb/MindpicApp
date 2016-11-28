@@ -69,8 +69,18 @@ body{
   display: inline-block;
 }
 
+/*--------------TAKE PICTURE---------------*/
+.floating-button-picture{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #db4437;
+  position: relative;
+  color:white;
+  font-size: 20;
+  margin: auto;
 
-
+}
 
 /*---------------REFLECTION TEXT AREA---------------*/
 textarea {
