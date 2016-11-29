@@ -1,7 +1,7 @@
 html {
   position: relative;
   min-height: 100%;
-  font-family: monospace;
+
 }
 
 body{
@@ -9,7 +9,7 @@ body{
   height:100%;
   background-repeat: no-repeat;
   background-position: center bottom;
-  font-family:
+  font-family: monospace;
 }
 
 /*Login form*/
