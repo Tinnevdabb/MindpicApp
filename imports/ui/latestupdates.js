@@ -3,9 +3,8 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 import './latestupdates.html';
 
-
-$(document).ready(function () {
-    $('.glyphicon').click(function () {
-        $(this).toggleClass("glyphicon-star-empty").toggleClass("glyphicon-star");
-    });
+Template.latestupdates.events({
+    "click .glyphicon": function(event){
+         $(event.currentTarget).toggleClass('glyphicon-star-empty glyphicon-star');
+       }
 });
