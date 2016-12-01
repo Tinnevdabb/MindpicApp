@@ -9,7 +9,6 @@ body{
   height:100%;
   background-repeat: no-repeat;
   background-position: center bottom;
-  font-family: monospace;
 }
 
 /*Login form*/
@@ -18,13 +17,19 @@ body{
   border: 15px solid;
   border-radius: 15px;
   border-color: white;
-  margin-top: 50px;
+  margin-top: 10px;
 
 }
 
-.jumbotron{
-  text-align: center;
+hr{
+  width:40%;
+  height: 2px;
+  display: inline-block;
+  vertical-align:middle;
+  background-color: #A8A8A8;
+
 }
+
 
 /*-------------LATEST UPDATES PAGE------------*/
 
