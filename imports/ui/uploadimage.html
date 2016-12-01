@@ -31,13 +31,11 @@ Uploading <b>{{file.name}}</b>:
   {{#each file in uploadedFiles.each}}
   <tr>
     <td>
-      <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>
-      <div> <img src=" {{images}}" alt=""> Image </div>
+      <img src="{{file.link}}?download=true" download="{{file.name}}">
     </td>
     <td>
 
       <div class="delete">
-        
         <button class="btn btn-danger" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
           <i class="glyphicon glyphicon-remove"> </i>
         </button>
