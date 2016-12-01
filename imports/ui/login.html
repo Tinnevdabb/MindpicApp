@@ -1,41 +1,49 @@
 <template name="login">
-  <h1 class='col-md-12 text-center'>Mindpic</h1>
-          <div class='col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 login-form-bg'>
-
-          <div growl></div>
+    <div class='col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 login-form-bg'>
+        <table class="table text-center" style="margin-top: 20px; ">
+          <tr >
+            <td >
+              <img src="/images/logo.png" style="width: 75px; height:75px; " >
+            </td>
+            <td>
+              <h1 style="color:red; ">Mindpic</h1>
+            </td>
+          </tr>
+        </table>
+        <br />
 
         <form ng-submit="login()" method="post"
               style="margin-top:30px;">
-
-                <div class="form-group">
-                  <div class="input-group text-center input-group-lg">
-                     <span class="input-group-addon" id="basic-addon1">
-                        <i class="glyphicon glyphicon-envelope"></i>
+                <div class="form-group input-group text-center input-group-lg">
+                     <span class="input-group-addon" >
+                        <i class="glyphicon glyphicon-user"></i>
                      </span>
                       <input type="text"
                              class="form-control"
-                             placeholder="Email"
-                             ng-model="email"/>
-                           </div>
+                             placeholder="Username"/>
                 </div>
 
-          <div class="form-group">
-              <div class="input-group text-center input-group-lg">
-                <span class="input-group-addon" id="basic-addon1">
-                   <i class="glyphicon glyphicon-asterisk"></i>
+          <div class="form-group input-group text-center input-group-lg">
+                <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-lock"></i>
                 </span>
                   <input type="password"
                          class="form-control"
-                         placeholder="Password"
-                         ng-model="password"/>
-              </div>
+                         placeholder="Password"/>
             </div>
+              <a href="/*" style="float: right; color: black;">Forgot password?</a>
 
             <div class="form-group text-center">
-              <a href="/latestupdates"><button type="submit" class="btn btn-default btn-lg btn-block">Log in</button></a>
+              <br /><br /><br /><a href="/latestupdates"><button class="btn btn-danger btn-lg btn-block">Log in</button></a>
+                <br />
+              <div >
+                  <hr >
+                  <p style="display:inline-block;">&nbsp; &nbsp; OR &nbsp; &nbsp;</p>
+                  <hr >
+              </div>
+
+              <br /><a href="/register"><button class="btn btn-danger btn-lg btn-block">Sign up</button></a>
             </div>
-                <a href="/register">Register</a>
-                <a href="/*" style="float: right;">Forgot password?</a>
 
         </form>
 
