@@ -4,6 +4,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './uploadimage.html';
 
 import {Images} from '../lib/image.collection.js';
+import { FilesCollection } from 'meteor/ostrio:files';
 
 
 Template.uploadedFiles.helpers({
@@ -16,11 +17,38 @@ Template.uploadForm.onCreated(function () {
   this.currentUpload = new ReactiveVar(false);
 });
 
+
+
+Template.uploadedFiles.helpers({
+  images: function () {
+    return Images.find(); // Where Images is an FS.Collection instance
+  }
+});
+
+
 Template.uploadForm.helpers({
   currentUpload: function () {
     return Template.instance().currentUpload.get();
   }
 });
+
+Template.uploadedFiles.events({
+  'click .delete': function(event){
+    event.preventDefault();
+    var documentId =this._id;
+      if(confirm("Delete this image?")){
+      Images.remove({ _id: documentId});
+
+    }
+      return false;
+    }
+});
+
+
+
+
+
+
 
 Template.uploadForm.events({
   'change #fileInput': function (e, template) {

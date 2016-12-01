@@ -28,4 +28,6 @@ mdg:camera
 ostrio:files
 ostrio:templatehelpers
 mizzao:bootboxjs
+cfs:ui
+cosio55:autoform-cloudinary
 autopublish
