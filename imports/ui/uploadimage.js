@@ -36,16 +36,13 @@ Template.uploadedFiles.events({
   'click .delete': function(event){
     event.preventDefault();
     var documentId =this._id;
-      if(confirm("Delete this image?")){
+      if(bootbox.alert("Are you sure you want to delete this image?")){
       Images.remove({ _id: documentId});
 
     }
       return false;
     }
 });
-
-
-
 
 
 
@@ -69,9 +66,9 @@ Template.uploadForm.events({
 
         uploadInstance.on('end', function(error, fileObj) {
           if (error) {
-            alert('Error during upload: ' + error.reason);
+            bootbox.alert('Error during upload: ' + error.reason);
           } else {
-            alert('File "' + fileObj.name + '" successfully uploaded');
+            bootbox.alert("File has been successfully uploaded!");
           }
           template.currentUpload.set(false);
         });
