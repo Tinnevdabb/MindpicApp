@@ -30,17 +30,11 @@ Uploading <b>{{file.name}}</b>:
 <table>
   {{#each file in uploadedFiles.each}}
   <tr>
-    <td>
-      <img src="{{file.link}}?download=true" download="{{file.name}}">
-    </td>
-    <td>
-
-      <div class="delete">
-        <button class="btn btn-danger" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
-          <i class="glyphicon glyphicon-remove"> </i>
+    <td id="img_container">
+      <img src="{{file.link}}?download=true" download="{{file.name}}" width="100%" height="auto" style="text-align: center;">
+        <button class="btn btn-danger delete button" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
+          <i class="glyphicon glyphicon-trash"> </i>
         </button>
-      </div>
-
     </td>
   </tr>
   {{/each}}
