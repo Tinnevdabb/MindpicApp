@@ -10,6 +10,9 @@ import '../ui/uploadimage.js';
 import '../ui/profile.js';
 import '../ui/register.js';
 import '../ui/forgotpassword.js';
+import '../ui/contactinfo.js';
+import '../ui/notifications.js';
+import '../ui/settings.js';
 import '../ui/test.js';
 
 
@@ -65,6 +68,27 @@ FlowRouter.route('/forgotpassword',{
 	name: 'forgotpassword',
   	action() {
     	BlazeLayout.render('forgotpassword',{main:'forgotpassword'});
+  	},
+});
+
+FlowRouter.route('/contactinfo',{
+	name: 'contactinfo',
+  	action() {
+    	BlazeLayout.render('contactinfo',{main:'contactinfo'});
+  	},
+});
+
+FlowRouter.route('/notifications',{
+	name: 'notifications',
+  	action() {
+    	BlazeLayout.render('notifications',{main:'notifications'});
+  	},
+});
+
+FlowRouter.route('/settings',{
+	name: 'settings',
+  	action() {
+    	BlazeLayout.render('settings',{main:'settings'});
   	},
 });
 
