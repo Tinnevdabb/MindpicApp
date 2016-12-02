@@ -1,88 +1,86 @@
 <template name="register">
-  <a href="/"  class="btn btn-default">Home</a>
-  <h1 class='col-md-12 text-center'>Register</h1>
+  <div class="navbar navbar-default bg-faded" >
+    <ul class="nav navbar-nav">
+      <li class="pull-left">
+        <a href="/" class="glyphicon glyphicon-arrow-left" style="margin-left: 10px; color:red;"></a>
+      </li>
+      <li>
+        <p class="navbar-brand align-center" style="color:black; font-size:175%;" >Create account</p>
+      </li>
+    </ul>
+  </div>
+
+
   <div class='col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 login-form-bg'>
+      <form ng-submit="login()" method="post" >
+              <div class="form-group input-group text-center input-group-lg">
+                   <span class="input-group-addon" >
+                      <i class="glyphicon ion-key" style="width:20px;"></i>
+                   </span>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Registration code"/>
+              </div>
 
-    <div growl></div>
-    
-    <form
-    style="margin-top:30px;">
+              <div class="form-group input-group text-center input-group-lg">
+                   <span class="input-group-addon" >
+                      <i class="glyphicon glyphicon-envelope"></i>
+                   </span>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Email address"/>
+              </div>
 
-    <div class="form-group">
-      <div class="input-group text-center input-group-lg">
-        <span class="input-group-addon" id="basic-addon1">
-          <i class="glyphicon glyphicon-user"></i>
-        </span>
-        <input type="text"
-        class="form-control"
-        placeholder="Token"
-        ng-model="token"/>
-      </div>
-    </div>
+              <div class="form-group input-group text-center input-group-lg">
+                    <span class="input-group-addon">
+                       <i class="glyphicon glyphicon-asterisk"></i>
+                    </span>
+                      <input type="password"
+                             class="form-control"
+                             placeholder="Password"/>
+              </div>
 
-    <div class="form-group">
-      <div class="input-group text-center input-group-lg">
-        <span class="input-group-addon" id="basic-addon1">
-          <i class="glyphicon glyphicon-user"></i>
-        </span>
-        <input type="text"
-        class="form-control"
-        placeholder="Firt name"
-        ng-model="first name"/>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="input-group text-center input-group-lg">
-        <span class="input-group-addon" id="basic-addon1">
-          <i class="glyphicon glyphicon-user"></i>
-        </span>
-        <input type="text"
-        class="form-control"
-        placeholder="Last name"
-        ng-model="last name"/>
-      </div>
-    </div>
+              <p style="color:red; font-size:20px;">Personal information </p>
 
-    <div class="form-group">
-      <div class="input-group text-center input-group-lg">
-        <span class="input-group-addon" id="basic-addon1">
-          <i class="glyphicon glyphicon-user"></i>
-        </span>
-        <input type="text"
-        class="form-control"
-        placeholder="Nickname"
-        ng-model="nickname"/>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="input-group text-center input-group-lg">
-        <span class="input-group-addon" id="basic-addon1">
-          <i class="glyphicon glyphicon-envelope"></i>
-        </span>
-        <input type="text"
-        class="form-control"
-        placeholder="Email"
-        ng-model="email"/>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="input-group text-center input-group-lg">
-        <span class="input-group-addon" id="basic-addon1">
-          <i class="glyphicon glyphicon-asterisk"></i>
-        </span>
-        <input type="password"
-        class="form-control"
-        placeholder="Password"
-        ng-model="password"/>
-      </div>
-    </div>
-    <div class="form-group text-center">
-      <a href="/latestupdates"><button type="submit" class="btn btn-default btn-lg btn-block">Register</button></a>
+            <div class="form-group input-group text-center input-group-lg ">
+                  <span class="input-group-addon">
+                  </span>
+                  <input type="text"
+                         class="form-control"
+                         placeholder="First name"/>
+            </div>
 
-    </div>
-  </form>
+            <div class="form-group input-group text-center input-group-lg">
+              <span class="input-group-addon">
+              </span>
+                  <input type="text"
+                         class="form-control"
+                         placeholder="last name"/>
+            </div>
+
+            <div class="form-group input-group text-center input-group-lg">
+              <span class="input-group-addon">
+              </span>
+                    <input type="password"
+                           class="form-control"
+                           placeholder="Phone"/>
+              </div>
+
+              <p style="color:red; font-size:20px;">Nickname </p>
+              <p style="font-size:15px;">We insure anonymity with a nickname</p>
+
+            <div class="form-group input-group text-center input-group-lg ">
+                  <span class="input-group-addon">
+                  </span>
+                  <input type="text"
+                         class="form-control"
+                         placeholder="Nickname"/>
+            </div>
+
+            <a href="/register"><button class="btn btn-danger btn-lg btn-block">Sign up</button></a>
+
+      </form>
 
 </div>
-
 
 </template>
