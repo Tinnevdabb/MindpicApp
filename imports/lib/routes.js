@@ -7,7 +7,7 @@ import '../ui/login.js';
 import '../ui/reflectiontextarea.js';
 import '../ui/camera.js';
 import '../ui/uploadimage.js';
-import '../ui/contactmenu.js';
+import '../ui/profile.js';
 import '../ui/register.js';
 import '../ui/forgotpassword.js';
 import '../ui/test.js';
@@ -47,10 +47,10 @@ FlowRouter.route('/uploadimage',{
     	BlazeLayout.render('uploadimage',{main:'uploadimage'});
   	},
 });
-FlowRouter.route('/contactmenu',{
-	name: 'contactmenu',
+FlowRouter.route('/profile',{
+	name: 'profile',
   	action() {
-    	BlazeLayout.render('contactmenu',{main:'contactmenu'});
+    	BlazeLayout.render('profile',{main:'profile'});
   	},
 });
 
