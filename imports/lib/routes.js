@@ -9,7 +9,9 @@ import '../ui/camera.js';
 import '../ui/uploadimage.js';
 import '../ui/contactmenu.js';
 import '../ui/register.js';
+import '../ui/forgotpassword.js';
 import '../ui/test.js';
+
 
 FlowRouter.route('/',{
 	name: 'login',
@@ -56,6 +58,13 @@ FlowRouter.route('/register',{
 	name: 'register',
   	action() {
     	BlazeLayout.render('register',{main:'register'});
+  	},
+});
+
+FlowRouter.route('/forgotpassword',{
+	name: 'forgotpassword',
+  	action() {
+    	BlazeLayout.render('forgotpassword',{main:'forgotpassword'});
   	},
 });
 
