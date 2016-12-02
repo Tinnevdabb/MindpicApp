@@ -11,6 +11,11 @@ body{
   background-position: center bottom;
 }
 
+.glyphicon{
+  font-size: 20px;
+}
+
+
 /*Login form*/
 .login-form-bg{
   background-color: white;
