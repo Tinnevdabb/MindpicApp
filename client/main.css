@@ -127,3 +127,14 @@ textarea {
     right:10px;
 
 }
+
+/*------------------PERSONAL INFORMATION--------------*/
+.textinput{
+  font-size:17px;
+  margin-left:20px;
+  margin-right:20px;
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: 0;
+  width: 100%;
+}
