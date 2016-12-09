@@ -27,18 +27,26 @@ Uploading <b>{{file.name}}</b>:
 
 <template name="uploadedFiles">
 {{#if uploadedFiles.count}}
+
 <table>
+
   {{#each file in uploadedFiles.each}}
   <tr>
     <td id="img_container">
-      <img src="{{file.link}}?download=true" download="{{file.name}}" width="100%" height="auto" style="text-align: center;">
-        <button class="btn btn-danger delete button" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
+    
+      <img src="{{file.link}}?download=true" download="{{file.name}}"  class="img-responsive" width="100%" height="auto" style="text-align: center;" >
+
+        <button data-id="{{file._id}}" class="btn btn-danger delete button" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
           <i class="glyphicon glyphicon-trash"> </i>
+
         </button>
+
     </td>
   </tr>
   {{/each}}
+
 </table>
+
 {{else}}
 <div>No files uploaded, yet</div>
 {{/if}}

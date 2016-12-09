@@ -7,15 +7,44 @@ import {Images} from '../lib/image.collection.js';
 import { FilesCollection } from 'meteor/ostrio:files';
 
 
+
+
+
+
+
+
+
+
+
+
+Template.uploadedFiles.events({
+ 'click .btn-danger'(e) {
+    console.log($(e.target).data('id'));
+
+
+
+    //var id = $(e.target).data("id");
+    //console.log(id);
+    //Images.remove(id);
+  }
+});
+
+
+
 Template.uploadedFiles.helpers({
   uploadedFiles: function () {
     return Images.find();
   }
 });
 
+
+
 Template.uploadForm.onCreated(function () {
   this.currentUpload = new ReactiveVar(false);
 });
+
+
+
 
 
 
@@ -32,6 +61,8 @@ Template.uploadForm.helpers({
   }
 });
 
+
+
 Template.uploadedFiles.events({
   'click .delete': function(event){
     event.preventDefault();
@@ -47,6 +78,7 @@ Template.uploadedFiles.events({
 
 
 
+
 Template.uploadForm.events({
   'change #fileInput': function (e, template) {
     if (e.currentTarget.files && e.currentTarget.files[0]) {
@@ -54,6 +86,11 @@ Template.uploadForm.events({
       // there was multiple files selected
       var file = e.currentTarget.files[0];
       if (file) {
+
+        if (Images.find().count()===1) {
+         Images.remove({});
+         console.log("REMOVE");
+       }
         var uploadInstance = Images.insert({
           file: file,
           streams: 'dynamic',
@@ -69,7 +106,13 @@ Template.uploadForm.events({
             bootbox.alert('Error during upload: ' + error.reason);
           } else {
             bootbox.alert("File has been successfully uploaded!");
-          }
+            Session.set('img_id',fileObj._id);
+            var image = Session.get('img_id');
+            console.log(image);
+
+}
+
+
           template.currentUpload.set(false);
         });
 
