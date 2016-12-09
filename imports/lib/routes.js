@@ -13,6 +13,8 @@ import '../ui/forgotpassword.js';
 import '../ui/contactinfo.js';
 import '../ui/notifications.js';
 import '../ui/settings.js';
+import '../ui/menu.js';
+import '../ui/personalinfo.js';
 import '../ui/test.js';
 
 
@@ -85,10 +87,24 @@ FlowRouter.route('/notifications',{
   	},
 });
 
+FlowRouter.route('/menu',{
+	name: 'menu',
+  	action() {
+    	BlazeLayout.render('menu',{main:'menu'});
+  	},
+});
+
 FlowRouter.route('/settings',{
 	name: 'settings',
   	action() {
     	BlazeLayout.render('settings',{main:'settings'});
+  	},
+});
+
+FlowRouter.route('/personalinfo',{
+	name: 'personalinfo',
+  	action() {
+    	BlazeLayout.render('personalinfo',{main:'personalinfo'});
   	},
 });
 
