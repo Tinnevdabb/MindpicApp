@@ -15,6 +15,10 @@ body{
   font-size: 20px;
 }
 
+.navbar {
+    margin-bottom: 0;
+}
+
 
 /*Login form*/
 .login-form-bg{
@@ -132,9 +136,19 @@ textarea {
 .textinput{
   font-size:17px;
   margin-left:20px;
-  margin-right:20px;
   border: 0;
   border-bottom: 1px solid black;
   outline: 0;
   width: 100%;
+}
+
+/*-----------------CONTACT INFORMATION----------------*/
+.contact{
+  font-size:17px;
+  border: 0;
+  background-color:white;
+  color:black;
+  resize:none;
+  overflow: hidden;
+
 }
