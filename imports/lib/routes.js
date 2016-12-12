@@ -5,7 +5,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import '../ui/latestupdates.js';
 import '../ui/login.js';
 import '../ui/camera.js';
-import '../ui/uploadimage.js';
+//import '../ui/uploadimage.js';
 import '../ui/profile.js';
 import '../ui/register.js';
 import '../ui/forgotpassword.js';
@@ -40,12 +40,7 @@ FlowRouter.route('/camera',{
   	},
 });
 
-FlowRouter.route('/uploadimage',{
-	name: 'uploadimage',
-  	action() {
-    	BlazeLayout.render('uploadimage',{main:'uploadimage'});
-  	},
-});
+
 FlowRouter.route('/profile',{
 	name: 'profile',
   	action() {
