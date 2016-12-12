@@ -42,7 +42,7 @@ Template.uploadForm.onCreated(function () {
 });
 
 Template.uploadedFiles.helpers({
-  images: function () {
+  uploadedFiles: function () {
     return Images.find(); // Where Images is an FS.Collection instance
   }
 });
@@ -79,7 +79,7 @@ Template.uploadForm.events({
       var file = e.currentTarget.files[0];
       if (file) {
 
-        if (Images.find().count()===1) {
+        if (Images.find().count()>1) {
          Images.remove({});
          console.log("REMOVE");
        }
