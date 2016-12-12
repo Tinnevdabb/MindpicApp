@@ -7,9 +7,6 @@
         <li>
           <a class="navbar-brand star" style="color:white">Camera</a>
         </li>
-        <li class="pull-right">
-          <a href="/uploadimage"><span class="glyphicon glyphicon-folder-open" style="color:white"></span></a>
-        </li>
       </ul>
     </div>
 
@@ -31,6 +28,9 @@
 
 
     </ul>
+    {{> uploadForm}}
+    {{> imageView}}
+    {{> uploadedFiles}}
 
     <br>
     <div class="container">
@@ -75,4 +75,52 @@ Description part: How did today's weather affect you feelings? " disabled></text
     </div>
 
 
+</template>
+
+<template name="uploadForm">
+{{#with currentUpload}}
+Uploading <b>{{file.name}}</b>:
+<span id="progress">{{progress.get}}%</span>
+{{else}}
+<input id="fileInput" type="file" />
+<p><small>Upload file in <code>jpeg</code> or <code>png</code> format, with size less or equal to 10MB</small></p>
+{{/with}}
+</template>
+
+
+<template name="uploadedFiles">
+{{#if uploadedFiles.count}}
+
+<table>
+
+  {{#each file in uploadedFiles.each}}
+  <tr>
+    <td id="img_container">
+
+      <img src="{{file.link}}?download=true" download="{{file.name}}"  class="img-responsive" width="100%" height="auto" style="text-align: center;" >
+
+        <button data-id="{{file._id}}" class="btn btn-danger delete button" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
+          <i class="glyphicon glyphicon-trash"> </i>
+
+        </button>
+
+    </td>
+  </tr>
+  {{/each}}
+
+</table>
+
+{{else}}
+<div>No files uploaded, yet</div>
+{{/if}}
+</template>
+
+<template name="imageView">
+<div class="imageView">
+  {{#each images}}
+  <div>
+
+  </div>
+  {{/each}}
+</div>
 </template>
