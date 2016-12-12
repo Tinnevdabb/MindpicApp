@@ -1,5 +1,5 @@
 export const Images = new Meteor.Files({
-  debug: true,
+  debug: false,
   collectionName: 'Images',
   allowClientCode: true, // Disallow remove files from Client
   onBeforeUpload: function (file) {
