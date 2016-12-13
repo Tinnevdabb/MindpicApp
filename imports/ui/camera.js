@@ -5,6 +5,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import './camera.html';
 
 import {Images} from '../lib/image.collection.js';
+import {Reflections} from '../lib/reflection.collection.js';
 import { FilesCollection } from 'meteor/ostrio:files';
 
 reflection= new Mongo.Collection('reflection');
@@ -34,6 +35,24 @@ Template.takePhoto.events({
         Meteor.call('saveImage', (data));
     });
 }
+});
+
+Template.takePhoto.events({
+  'submit .reflection'(event) {
+    console.log('submit');
+    event.preventDefault();
+
+    const ref = event.target.ref.value;
+    console.log(ref);
+
+
+     Reflections.insert({
+        text: ref,
+        createdAt: new Date(), // current time
+        image_id: Session.get('img_id'),
+      });
+
+  },
 });
 
 
@@ -99,8 +118,10 @@ Template.uploadForm.events({
           } else {
             bootbox.alert("File has been successfully uploaded!");
             Session.set('img_id',fileObj._id);
-            var image = Session.get('img_id');
-            console.log(image);
+            console.log(fileObj);
+            //store image id and turn into picture
+            //var image = Session.get('img_id');
+            //console.log(image);
 
 }
 

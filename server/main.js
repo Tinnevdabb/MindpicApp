@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 
 import '../imports/lib/image.collection.js';
+import '../imports/lib/reflection.collection.js';
 
 Meteor.startup(() => {
   reflection= new Mongo.Collection('reflection');
