@@ -1,11 +1,11 @@
 <template name="takePhoto">
-  <div class="navbar navbar-inverse bg-faded">
+  <div class="navbar navbar-default bg-faded" >
     <ul class="nav navbar-nav">
       <li class="pull-left">
-        <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left" style="color:white"></span></a>
+        <a href="/latestupdates" class="glyphicon glyphicon-arrow-left" style="margin-left: 10px; color:red;"></a>
       </li>
       <li>
-        <a class="navbar-brand star" style="color:white">Camera</a>
+        <p class="navbar-brand align-center" style="color:black; font-size:175%;" >Camera</p>
       </li>
     </ul>
   </div>
@@ -25,9 +25,11 @@
 
 
   </ul>
+  <div float="center" >
   {{> uploadForm}}
   {{> imageView}}
   {{> uploadedFiles}}
+  </div>
 
   <br>
   <div class="container">
