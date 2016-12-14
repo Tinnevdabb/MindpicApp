@@ -2,13 +2,13 @@
     <div class="navbar bg-faded" >
       <ul class="nav navbar-nav">
         <li class="pull-left">
-          <a class="glyphicon glyphicon-th-list" style="color:red; font-size: 20px;"></a>
+          <a href="/menu" class="glyphicon glyphicon-th-list" style="color:red; font-size: 20px;"></a>
         </li>
         <li>
           <p class="navbar-brand align-center" style="color:black; font-size:20;" >Latest updates</p>
         </li>
         <li class="pull-right">
-          <a href="/contactmenu" class="glyphicon glyphicon-user" style="color:red; font-size: 20px;"></a>
+          <a href="/profile" class="glyphicon glyphicon-user" style="color:red; font-size: 20px;"></a>
         </li>
       </ul>
     </div>
@@ -16,11 +16,7 @@
 
     <div class=”container”>
         {{#each reflections}}
-        {{text}}
-        <img src="http://localhost:3000/cdn/storage/Images/{{image_id}}/original/{{image_id}}.jpg" width="200px">
-        <br>
-        {{/each}}
-        <!--<ul class="nav navbar-nav">
+        <ul class="nav navbar-nav">
           <li class="pull-left">
             <p style="margin-left: 20px; margin-top: 10px; font-size: 20px; " >User 1</p>
           </li>
@@ -29,21 +25,12 @@
           </li>
         </ul>
         <div class="thumbnail">
-        <img src="http://localhost:3000/cdn/storage/Images/{{image_id}}/original/{{image_id}}.jpg" alt="" width="200px">
-
+        <img src="http://localhost:3000/cdn/storage/Images/{{image_id}}/original/{{image_id}}.jpg" width="100%" height="auto">
+        <br>
+        {{text}}
         </div>
+        {{/each}}
 
-        <ul class="nav navbar-nav">
-          <li class="pull-left">
-            <p style="margin-left: 20px;  margin-top: 10px; font-size: 20px; ">User 2</p>
-          </li>
-          <li class="pull-right">
-            <span class="glyphicon glyphicon-star-empty" style="color:red; font-size: 20px; margin-right: 20px;  margin-top: 15px;"></span>
-          </li>
-        </ul>
-        <div class="thumbnail">
-          <img src="http://localhost:3000/cdn/storage/Images/{{image_id}}/original/{{image_id}}.jpg" alt="" width="200px">
-        </div>-->
 
 
     </div>
