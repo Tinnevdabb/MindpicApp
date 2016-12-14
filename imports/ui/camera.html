@@ -1,126 +1,123 @@
 <template name="takePhoto">
-    <div class="navbar navbar-inverse bg-faded">
-      <ul class="nav navbar-nav">
-        <li class="pull-left">
-          <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left" style="color:white"></span></a>
-        </li>
-        <li>
-          <a class="navbar-brand star" style="color:white">Camera</a>
-        </li>
-      </ul>
-    </div>
-
-
-
-    <ul class="thumbnail">
-      <img src="{{photo}}">
-      {{#each photos}}
-      <p><img src="{{image}}" width="100%"></p>
-      {{/each}}
-
-
-      <a href="/camera">
-        <div class="floating-button-picture">
-          <span class="capture glyphicon glyphicon-camera" style="vertical-align:middle; font-size: 20px; top: 28%; left:32%;" ></span>
-        </div>
-      </a>
-
-
-
+  <div class="navbar navbar-inverse bg-faded">
+    <ul class="nav navbar-nav">
+      <li class="pull-left">
+        <a href="/latestupdates"><span class="glyphicon glyphicon-arrow-left" style="color:white"></span></a>
+      </li>
+      <li>
+        <a class="navbar-brand star" style="color:white">Camera</a>
+      </li>
     </ul>
-    {{> uploadForm}}
-    {{> imageView}}
-    {{> uploadedFiles}}
+  </div>
+  <ul class="thumbnail">
+    <img src="{{photo}}">
+    {{#each photos}}
+    <p><img src="{{image}}" width="100%"></p>
+    {{/each}}
 
-    <br>
-    <div class="container">
-      <div class="caption">
-        <h3>Instructions:</h3>
-        <textarea  rows="100" cols="100" placeholder="
-1.Hey! Who are you? Take a picture, that symbolises you!
- Reflection part: Nice job! Tell, how this symbolises you!
 
-2.Think about something from the past, that you want t let go. Take a picture of something, that is according to this.
-Reflection part: What is the reason that you can't let this thing go? How does this picture represents your feelings about it? Feel free to write more about this subject!
+    <a href="/camera">
+      <div class="floating-button-picture">
+        <span class="capture glyphicon glyphicon-camera" style="vertical-align:middle; font-size: 20px; top: 28%; left:32%;" ></span>
+      </div>
+    </a>
 
-3.Remind yourself about one goal, that you would like to achieve in your life. Find something around you, that is the symbol of that.
-Reflection part: Explain, why is that the symbol of your future goal. Describe, what are you doing, to achieve that goal. Feel free to write more about this subject!
 
-4.Is there something, that you really want to spend more time on? Let your mind free when taking a picture.
-Reflection part: What is your (secret) wish? What is stopping you from making that real? Feel free to write more about this subject!
 
-5.Is there a place (outside) where you feel calm and save? Show this place by taking a picture of it.
-Reflection part: How was it to be back at this place? How does this place effects your feelings? Tell why you chose this particular place. Feel free to write more about this subject!
+  </ul>
+  {{> uploadForm}}
+  {{> imageView}}
+  {{> uploadedFiles}}
 
-6.Everybody has a comfort zone, but sometimes it's good to take a step out of it. Take a picture of something that's out of your comfort zone.
-Reflection part: What is the reason to take a step out of your comfort zone? What does it take from you to make this step? Tell something about the positive thing that you get from crossing your own borders. Feel free to write more about this subject!
+  <br>
+  <div class="container">
+    <div class="caption">
+      <h3>Instructions:</h3>
+      <textarea  rows="100" cols="100" placeholder="
+      1.Hey! Who are you? Take a picture, that symbolises you!
+      Reflection part: Nice job! Tell, how this symbolises you!
 
-7.Search outside for an object that relates to your current feelings.
-Description part: What is this object and why did you make a picture of this? Tell something more about your current feelings.
+      2.Think about something from the past, that you want t let go. Take a picture of something, that is according to this.
+      Reflection part: What is the reason that you can't let this thing go? How does this picture represents your feelings about it? Feel free to write more about this subject!
 
-8.Find a place outside where you feel save and take a picture of this place.
-Description part: What makes you feel save? Why did you choose this place?
+      3.Remind yourself about one goal, that you would like to achieve in your life. Find something around you, that is the symbol of that.
+      Reflection part: Explain, why is that the symbol of your future goal. Describe, what are you doing, to achieve that goal. Feel free to write more about this subject!
 
-9.What's the weather today? Go outside and find an interesting perspective :-)
-Description part: How did today's weather affect you feelings? " disabled></textarea>
-        <br>
-        <form class="reflection">
+      4.Is there something, that you really want to spend more time on? Let your mind free when taking a picture.
+      Reflection part: What is your (secret) wish? What is stopping you from making that real? Feel free to write more about this subject!
+
+      5.Is there a place (outside) where you feel calm and save? Show this place by taking a picture of it.
+      Reflection part: How was it to be back at this place? How does this place effects your feelings? Tell why you chose this particular place. Feel free to write more about this subject!
+
+      6.Everybody has a comfort zone, but sometimes it's good to take a step out of it. Take a picture of something that's out of your comfort zone.
+      Reflection part: What is the reason to take a step out of your comfort zone? What does it take from you to make this step? Tell something about the positive thing that you get from crossing your own borders. Feel free to write more about this subject!
+
+      7.Search outside for an object that relates to your current feelings.
+      Description part: What is this object and why did you make a picture of this? Tell something more about your current feelings.
+
+      8.Find a place outside where you feel save and take a picture of this place.
+      Description part: What makes you feel save? Why did you choose this place?
+
+      9.What's the weather today? Go outside and find an interesting perspective :-)
+      Description part: How did today's weather affect you feelings? " disabled></textarea>
+      <br>
+      <form class="reflection">
 
 
         <h3>Reflection:</h3>
-        <textarea  rows="100" cols="100" placeholder="Please write your reflections here..."></textarea>
+        <textarea  rows="100" name="ref" cols="100" placeholder="Please write your reflections here..."></textarea>
         <button class="btn btn-primary" type="submit">save</button>
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
 
 </template>
 
 <template name="uploadForm">
-{{#with currentUpload}}
-Uploading <b>{{file.name}}</b>:
-<span id="progress">{{progress.get}}%</span>
-{{else}}
-<input id="fileInput" type="file" />
-<p><small>Upload file in <code>jpeg</code> or <code>png</code> format, with size less or equal to 10MB</small></p>
-{{/with}}
+  {{#with currentUpload}}
+  Uploading <b>{{file.name}}</b>:
+  <span id="progress">{{progress.get}}%</span>
+  {{else}}
+  <input id="fileInput" type="file" />
+  <p><small>Upload file in <code>jpeg</code> or <code>png</code> format, with size less or equal to 10MB</small></p>
+  {{/with}}
 </template>
 
 
 <template name="uploadedFiles">
-{{#if uploadedFiles.count}}
+  {{#if uploadedFiles.count}}
 
-<table>
+  <table>
 
-  {{#each file in uploadedFiles.each}}
-  <tr>
-    <td id="img_container">
+    {{#each file in uploadedFiles.each}}
+    <tr>
+      <td id="img_container">
 
-      <img src="{{file.link}}?download=true" download="{{file.name}}"  class="img-responsive" width="100%" height="auto" style="text-align: center;" >
+        <img src="{{file.link}}?download=true" download="{{file.name}}"  class="img-responsive" width="100%" height="auto" style="text-align: center;" >
 
         <button data-id="{{file._id}}" class="btn btn-danger delete button" ng-bootbox-custom-dialog="Are you sure you want to remove this image?" >
           <i class="glyphicon glyphicon-trash"> </i>
 
         </button>
 
-    </td>
-  </tr>
-  {{/each}}
+      </td>
+    </tr>
+    {{/each}}
 
-</table>
+  </table>
 
-{{else}}
-<div>No files uploaded, yet</div>
-{{/if}}
+  {{else}}
+  <div>No files uploaded, yet</div>
+  {{/if}}
 </template>
 
 <template name="imageView">
-<div class="imageView">
-  {{#each images}}
-  <div>
+  <div class="imageView">
+    {{#each images}}
+    <div>
 
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
-</div>
 </template>
