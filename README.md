@@ -7,5 +7,4 @@ An application that helps and learns teenagers between 11-15 years old to expres
 
 Made by:
 * Tinne Van den Abbeele (Belgium),
-* Aleksi Ojala (Finland),
 * Kevin Kiprotich (Kenia)
